@@ -1,7 +1,9 @@
 # !/bin/bash
 
-if [ $# == 3 ]
-then
+# Comprobamos que los argumentos son 3 y que el segundo 
+
+if [ $# == 3 ] && [ $2 -ge 1] && [ $2 -le 99]
+ then
 	echo "Crear todo"
 
 if [ "$1"  ]; then
