@@ -3,12 +3,15 @@
 # Comprobamos que los argumentos son 3 y que el segundo 
 
 if [ $# == 3 ] && [ $2 -ge 1] && [ $2 -le 99]
- then
-	echo "Crear todo"
+then
+	dirname=$1
+	num_files=$2
+	basefilename=$3
 
-if [ "$1"  ]; then
-	mkdir -p  "$1"
-	printf "Directorio creado." 
+	'test -d $dirname'	
+
+
+ 
 fi
 
 cd "$1"
