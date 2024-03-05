@@ -13,7 +13,19 @@ archivo_media="$3"
 shift 3
 numeros=("$@")
 
+# Crear el directorio si no existe
+if [ ! -d $directorio ]; then
+    mkdir -p $directorio
+fi
 
+# Crear archivo para la suma
+echo "Calculando la suma..."
+suma=0
+for num in "${numeros[@]}"; do
+    suma=$((suma + num))
+done
+echo "$suma" > "$directorio/$archivo_suma"
+echo "La suma ha sido guardada en $directorio/$archivo_suma"
 
 
 # Haz un script que reciba los siguientes argumentos:
